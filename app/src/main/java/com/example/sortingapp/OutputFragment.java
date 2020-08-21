@@ -37,10 +37,12 @@ public class OutputFragment extends Fragment {
 
         Bundle bundle = getArguments();
         int[] array = new int[100];
+       // int key = 8;
 
         if(bundle != null) {
             try {
                 array = bundle.getIntArray(Keystore.KEY_ONE);
+               // key = bundle.getInt(Keystore.KEY_TWO);
             } catch (NullPointerException e) {
             }
 
@@ -69,12 +71,17 @@ public class OutputFragment extends Fragment {
                 avgTime += timeElapsed;
             }
             TextView textView = getView().findViewById(R.id.tv);
-
-            textView.setText(String.valueOf(array[0]));
+            TextView textView1 = getView().findViewById(R.id.tv_avgTime);
+            textView.setText("Sorted value is ");
+            for(int k=0; k<arr.length-1; k++){
+                textView.append(String.valueOf(arr[k]+","));
+            }
+            textView.append(String.valueOf(arr[arr.length -1]));
+            textView1.setText("Average Time taken is : "+avgTime+ " ns" );
         } else {
             TextView textView = getView().findViewById(R.id.tv);
 
-            textView.setText("Processing...");
+            textView.setText("Your result will display here...");
         }
 
 

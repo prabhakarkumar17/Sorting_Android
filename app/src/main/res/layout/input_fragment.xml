@@ -8,13 +8,118 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sorting Application"
-        android:textSize="35sp" />
+        android:textSize="35sp"
+        android:onClick="on" />
 
     <EditText
         android:id="@+id/et_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter comma seperated digits for sorting" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select sorting method : "
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <RadioButton
+            android:id="@+id/bubbleSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Bubble Sort" />
+
+        <RadioButton
+            android:id="@+id/selectionSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selection Sort"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/insertionSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insertion Sort"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radixSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radix Sort"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/combSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comb Sort"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/piegeonHoleSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Piegeon Hole Sort"
+            android:onClick="onRadioButtonClicked"/>
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/quickSort"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Quick Sort"-->
+<!--            android:onClick="onRadioButtonClicked"/>-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/brickSort"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Brick Sort"-->
+<!--            android:onClick="onRadioButtonClicked"/>-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/mergeSort"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Merge Sort"-->
+<!--            android:onClick="onRadioButtonClicked"/>-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/heapSort"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Heap Sort"-->
+<!--            android:onClick="onRadioButtonClicked"/>-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/cycleSort"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cycle Sort"-->
+<!--            android:onClick="onRadioButtonClicked"/>-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/stoogeSort"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Stooge Sort"-->
+<!--            android:onClick="onRadioButtonClicked"/>-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/gnomeSort"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Gnome Sort"-->
+<!--            android:onClick="onRadioButtonClicked"/>-->
+<!--        -->
+    </RadioGroup>
+    
 
     <Button
         android:id="@+id/bt_submit"

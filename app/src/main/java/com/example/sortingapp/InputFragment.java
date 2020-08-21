@@ -10,12 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class InputFragment extends Fragment {
+public class InputFragment extends Fragment implements View.OnClickListener {
+
+    public InputFragment() {
+
+    }
     private DataListener parentActivity;
 
     public interface DataListener {
@@ -44,6 +49,7 @@ public class InputFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
     }
 
+    int[] transferData = new int[100];
     @Override
     public void onStart() {
         super.onStart();
@@ -63,8 +69,20 @@ public class InputFragment extends Fragment {
                     no[i] = Integer.parseInt(inputDigit[i]);
                 }
                 parentActivity.listen(no);
+                transferData = no;
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+//        switch(view.getId()){
+//            case R.id.bubbleSort:
+//                if(checked)
+//                    //parentActivity.listen(transferData);
+//        }
     }
 
     @Override

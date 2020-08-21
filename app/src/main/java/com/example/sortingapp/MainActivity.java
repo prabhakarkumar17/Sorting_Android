@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements InputFragment.Dat
 
         Bundle bundle = new Bundle();
         bundle.putIntArray(Keystore.KEY_ONE, value);
+        //bundle.putInt(Keystore.KEY_TWO, key);
         outputFragment.setArguments(bundle);
-        fragmentTransaction.commit();
+        fragmentTransaction.replace(R.id.output_fragment_container,outputFragment).commit();
     }
 }
